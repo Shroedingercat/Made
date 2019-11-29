@@ -80,6 +80,7 @@ void  HashTable::Rebuild() {
         }
     }
     re_add = false;
+    empty_val = 0;
 }
 
 void HashTable::Increase_size() {

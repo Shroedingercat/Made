@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Nikita/CLionProjects/dz15/DSU.h
+assert.h
+-
+iostream
+-
+vector
+-
+algorithm
+-
+
+/cygdrive/c/Users/Nikita/CLionProjects/dz15/TSP.cpp
+TSP.h
+/cygdrive/c/Users/Nikita/CLionProjects/dz15/TSP.h
+
+/cygdrive/c/Users/Nikita/CLionProjects/dz15/TSP.h
+cmath
+-
+utility
+-
+vector
+-
+set
+-
+stack
+-
+DSU.h
+/cygdrive/c/Users/Nikita/CLionProjects/dz15/DSU.h
+

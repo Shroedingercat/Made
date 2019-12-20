@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/dz15.dir/main.cpp.o CMakeFiles/dz15.dir/TSP.cpp.o CMakeFiles/dz15.dir/DSU.cpp.o CMakeFiles/dz15.dir/Testing.cpp.o  -o dz15.exe -Wl,--out-implib,libdz15.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

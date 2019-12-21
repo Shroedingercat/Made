@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/dz6.dir/main.cpp.o  -o dz6.exe -Wl,--out-implib,libdz6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

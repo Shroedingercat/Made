@@ -25,17 +25,14 @@ void dfs(const adjacency_lst& graph, std::vector<int>& bridges, std::vector<bool
         }
  
         if (i != 0) {
-            int next = graph[curr][i-1].first;
-            bool dbl = false;
+            int next = graph[curr][i-1].first, count = 0;
             lowest[curr] = std::min(lowest[curr], lowest[next]);
-            for (int j = 0; j < graph[next].size(); j++){
-                for (int l = j + 1; l < graph[curr].size(); l++) {
-                    if (graph[next][l].first == graph[curr][j].first) {
-                        dbl = true;
-                    }
+            for (auto vertex: graph[curr]){
+                if (vertex.first == next) {
+                    count++;
                 }
             }
-            if (lowest[next] > entry[curr] && !dbl) {
+            if (lowest[next] > entry[curr] && count == 1) {
                 bridges.push_back(graph[curr][i-1].second);
             }
         }
@@ -75,7 +72,7 @@ std::vector<int> find_bridges(const adjacency_lst& graph, int n) {
 int main() {
     int n=0, m=0, u=0, w=0;
     std::fstream inOut;
-    inOut.open("bridges.in", std::ios::in);
+    inOut.open(R"(C:\aut\Made\dz6\bridges.in)", std::ios::in);
     inOut >> n >> m;
     adjacency_lst graph = adjacency_lst(n);
  
@@ -88,7 +85,7 @@ int main() {
         graph[w].push_back({u, i+1});
     }
     inOut.close();
-    inOut.open("bridges.out", std::ios::out);
+    inOut.open(R"(C:\aut\Made\dz6\bridges.out)", std::ios::out);
     std::vector<int> bridges = find_bridges(graph, n);
     std::sort(bridges.begin(), bridges.end());
     inOut << bridges.size() << std::endl;
